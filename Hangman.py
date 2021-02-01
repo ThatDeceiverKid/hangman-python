@@ -5,7 +5,7 @@ playAgain = True
 
 print("Welcome to Hangman!")
 
-user = input( "Type 'run' when you are ready to play.")
+user = input( "Type 'run' when you are ready to play.\n")
 
 if user.upper().strip() != "RUN":
     while user.upper().strip() != "RUN":
@@ -26,15 +26,13 @@ def init(userInt):
     return wordChoice
 
 while playAgain == True:
-    print("Let's begin! \n Please enter any integer.")
+    print("Let's begin! \nPlease enter any integer.")
     wordChoiceInit = input()
     gameWord = init(wordChoiceInit)
     while attemptsRemaining != 0 & attemptsRemaining < 6:  #Tracks attempts, here the guessing loop is implemented
         blankString = ""
         blanks = len(gameWord)
         for i in gameWord:
-            blankString + "_ " #Generating the blanks for each letter
-            if i == len(gameWord):
-                print(blankString + "printed")
-                break
-        charChoice = input("Please pick a letter.")
+            blankString += "_ " #Generating the blanks for each letter
+        print(blankString)
+        charChoice = input("Please pick a letter.\n")
