@@ -1,4 +1,4 @@
-#Simple Hangman program for practice. Connect to a database to track results maybe?
+#Simple Hangman program for practice. To-Do is at the bottom
 
 attemptsRemaining = 1
 playAgain = True
@@ -36,3 +36,9 @@ while playAgain == True:
             blankString += "_ " #Generating the blanks for each letter
         print(blankString)
         charChoice = input("Please pick a letter.\n")
+
+#To-Do:
+# - Print the Hangman
+# - Implement the guessing system (attemptsRemaining, error checking user character choice, etc.)
+# - Add a stop condition for the game (attemptsRemaining = 0, word guessed and they want to quit)
+# - *Eventually* create a stats upload system with a database (contained data TBD) for extra practice
